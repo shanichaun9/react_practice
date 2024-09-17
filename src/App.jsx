@@ -5,8 +5,8 @@ import InputBox from './components/InputBox'
 
 function App() {
   const [amount, setAmount] = useState(0)
-  const [from, setFrom] = useState('usd')
-  const [to, setTo] = useState('inr')
+  const [from, setFrom] = useState("usd")
+  const [to, setTo] = useState("inr")
   const [convertedAmount, setConvertedAmount] = useState(0)
 
   const currencyInfo = useCurrencyInfo(from)
@@ -19,13 +19,13 @@ function App() {
   }
 
   const convert = () => {
-    setConvertedAmount(amount * currencyInfo(to))
+    setConvertedAmount(amount * currencyInfo[to])
   }
   return (
     <div
       className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
       style={{
-        backgroundImage: `https://images.pexels.com/photos/27251587/pexels-photo-27251587/free-photo-of-a-blue-door-on-top-of-a-rock-with-a-sign-that-says-rock-and-roll.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1`,
+        backgroundImage: `url('https://images.pexels.com/photos/3532540/pexels-photo-3532540.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')`,
       }}
     >
       <div className="w-full">
